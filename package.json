@@ -1,0 +1,20 @@
+{
+    "name": "electron-quick-start",
+    "version": "1.0.0",
+    "description": "A minimal Electron application",
+    "main": "main.js",
+    "scripts": {
+        "start": "set NODE_ENV=development&&electron ."
+    },
+    "devDependencies": {
+        "electron": "^7.1.11",
+        "electron-packager": "^17.1.1",
+        "electron-reload": "^2.0.0-alpha.1",
+        "electron-reloader": "^1.2.3"
+    },
+    "dependencies": {
+        "fs-extra": "^11.1.0",
+        "typeface-rubik": "^1.1.13",
+        "windows-network-drive": "^4.0.1"
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <meta
+            http-equiv="X-Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <title>Hello World!</title>
+        <link rel="stylesheet" href="index.css" />
+
+        <link rel="stylesheet" href="fonts.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="welcome">
+                Hello <span id="user">User</span>, glad to see you back!
+            </h1>
+            <ul id="folders"></ul>
+            <div class="dirsContainer">
+                <h2 class="folder">Add Folder(s) to your sync</h2>
+                <div id="dirs">
+                    <img src="./assets/plus.png" class="plus" />
+                </div>
+            </div>
+            <form class="settings" id="settings">
+                <div class="server">
+                    <label for="server" class="severLabel"
+                        >Ip Adress of server in the format of
+                        \\\\192.123.45.67/MainPool/Data</label
+                    >
+                    <input
+                        type="text"
+                        id="server"
+                        required
+                        placeholder="\\192.123.45.67/MainPool/Data"
+                        pattern="\\\\(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\/\w+){0,2}"
+                    />
+                </div>
+                <div class="username">
+                    <label for="username" class="usernameLabel"
+                        >Username (If left blank will use credentials of host
+                        system)</label
+                    >
+                    <input type="text" id="username" placeholder="Username" />
+                </div>
+                <div class="password">
+                    <label for="password" class="passwordLabel"
+                        >Password (If left blank will use credentials of host
+                        system)</label
+                    >
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                    />
+                </div>
+                <button id="sync">Sync</button>
+            </form>
+        </div>
+
+        <script src="./renderer.js"></script>
+    </body>
+</html>
