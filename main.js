@@ -43,11 +43,6 @@ app.on("window-all-closed", function() {
     if (process.platform !== "darwin") app.quit();
 });
 
-app.on("window-all-closed", () => {
-    app.hide(); // for macOS
-    // use same logic for other OSes you want
-});
-
 app.on("activate", function() {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
@@ -68,9 +63,9 @@ ipcMain.on("select-dirs", async (event, arg) => {
 const env = process.env.NODE_ENV || "development";
 
 // If development environment
-if (env === "development") {
-    require("electron-reload")(__dirname, {
-        electron: path.join(__dirname, "node_modules", ".bin", "electron"),
-        hardResetMethod: "exit",
-    });
-}
+// if (env === "development") {
+//     require("electron-reload")(__dirname, {
+//         electron: path.join(__dirname, "node_modules", ".bin", "electron"),
+//         hardResetMethod: "exit",
+//     });
+// }

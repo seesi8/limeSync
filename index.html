@@ -32,14 +32,14 @@
                 <div class="server">
                     <label for="server" class="severLabel"
                         >Ip Adress of server in the format of
-                        \\\\192.123.45.67/MainPool/Data</label
+                        192.123.45.67/subdomain/data/...</label
                     >
                     <input
                         type="text"
                         id="server"
                         required
-                        placeholder="\\192.123.45.67/MainPool/Data"
-                        pattern="\\\\(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\/\w+){0,2}"
+                        placeholder="192.123.45.67/subdomain/data/..."
+                        pattern="(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\/\w+)*"
                     />
                 </div>
                 <div class="username">
@@ -61,6 +61,7 @@
                     />
                 </div>
                 <button id="sync">Sync</button>
+                <p id="debug"></p>
             </form>
         </div>
 

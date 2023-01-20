@@ -4,7 +4,8 @@
     "description": "A minimal Electron application",
     "main": "main.js",
     "scripts": {
-        "start": "set NODE_ENV=development&&electron ."
+        "start": "set NODE_ENV=development&&electron .",
+        "build": "npx electron-packager . LimeSync  --overwrite --platform=win32 && electron-builder build"
     },
     "devDependencies": {
         "electron": "^7.1.11",
@@ -14,7 +15,9 @@
     },
     "dependencies": {
         "fs-extra": "^11.1.0",
+        "fs-jetpack": "^5.1.0",
         "typeface-rubik": "^1.1.13",
         "windows-network-drive": "^4.0.1"
-    }
+    },
+    "author": "Samuel Liebert <Samuelliebert@gmail.com> https://seesi8/LimeSync"
 }
